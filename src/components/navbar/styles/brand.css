@@ -1,0 +1,15 @@
+.brand{
+    display: flex;
+    align-items: center;
+    height: 80px;
+    width: 140px;
+    text-decoration: none;
+
+}
+.brand:visited{
+    color: #353935;
+}
+.store-image{
+  max-height: 70%;
+  max-width: 50%;
+}

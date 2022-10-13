@@ -1,0 +1,6 @@
+.cart{
+    max-height: 50px;
+}
+.cart img{
+ max-height: inherit;
+}
