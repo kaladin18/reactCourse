@@ -25,13 +25,18 @@ export const categories = [
       render: false,
     },
     {
+      name: "Jovenes adultos",
+      link: "young adult",
+      render: true,
+    },
+    {
       name: "Drama",
       link: "drama",
       render: true,
     },
     {
       name: "Terror",
-      link: "terror",
+      link: "horror",
       render: true,
     },
   ];

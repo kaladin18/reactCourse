@@ -1,9 +1,10 @@
+import { NavLink } from 'react-router-dom';
 import './styles/category.css'
 function Category({name, link}) {
     return ( 
-        <a href = {`/category/${link}`} className = "category" >
+        <NavLink to={`/category/${link}`} className={({ isActive }) => isActive ? "currentCategory" : "category"}>
             <p>{name}</p>
-        </a>
+        </NavLink>
      );
 }
 
