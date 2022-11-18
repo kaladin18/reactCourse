@@ -1,4 +1,6 @@
 import './styles/item.css'
+import AddItemButton from './AddItemButton'
+import ItemQuantitySelector from './ItemQuantitySelector'
 import { NavLink } from 'react-router-dom'
 function ItemDetail({ book }) {
     return (
@@ -11,6 +13,9 @@ function ItemDetail({ book }) {
                         <p>{book.description}</p>
                     </div>
                     <p className='product-price'>{book.price}</p>
+                    <p className='stock'>Stock: {book.stock}</p>
+                    <ItemQuantitySelector stock={book.stock}/>
+                    <AddItemButton />
                 </div>
             </article>
         </NavLink>
