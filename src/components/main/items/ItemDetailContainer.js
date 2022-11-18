@@ -10,18 +10,25 @@ function ItemDetailContainer() {
         const db = getFirestore();
         const docRef = doc(db, 'books', itemId)
         getDoc(docRef).then((snapshot) => {
-            if(snapshot.size === 0){
-                console.log("No results");
+            console.log(snapshot);
+            if(!snapshot.exists()){
+                setBook(null)
+            } else {
+                setBook({id: snapshot.id, ...snapshot.data()})
             }
-            setBook({id: snapshot.id, ...snapshot.data()})
+        
+            
         })
         
     }, [itemId])
+    
     return (
-        <div className="detail-container">
-          <ItemDetail book={book}/>
-        </div>
-    )
-}
+            <div className="detail-container">
+              <ItemDetail book={book}/>
+            </div>
+        )
+    }
+    
+
 
 export default ItemDetailContainer
